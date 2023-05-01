@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+{% extends "main_app/common.html" %}
+{% load static %}
+<html lang="en">
+{% block content %}
+<title> Rescue | 404 Error </title>
+<style>    
+    body {
+        color: black;
+        font-size: 26px;
+        margin: 0;
+        background-color: #f1f1f1;
+    }
+    .img-responsive {
+            height: auto;
+            width: 100%;
+            margin-left: auto;
+            margin-right: auto;
+    }
+    .caption {
+        font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+        text-shadow: 0 3px 5px rgba(0, 0, 0, .3);
+        cursor: default;
+        text-align: center;
+    }
+
+    @media screen and (min-device-width: 465px) and (max-device-width: 591px)  {
+
+        .caption {
+            font-size: 2.5rem;
+        }
+        .container{
+            margin-top: 40%;
+            margin-bottom:30%;
+        }
+    }
+
+    @media screen and (max-device-width: 464px) {
+
+        .container{
+            margin-top: 40%;
+            margin-bottom:30%;
+        }
+
+        .caption {
+            font-size: 2.5rem;
+        }
+    }
+
+
+
+    @media screen and (max-device-width: 680px) and (min-device-width: 592px) {
+        .container {
+            margin-top: 20%;
+            margin-bottom:20%;
+        }
+
+    }
+
+    @media screen and (min-device-width: 681px) {
+        .container {
+            margin-top: 15%;
+            margin-bottom:10%;
+        }
+    }
+	 html {
+        scroll-behavior:smooth;
+    }
+
+</style>
+
+<body>
+    
+    <div class="container">
+        <div class="row justify-content-center m-0" style="width: 100%;">
+            <a href="/home"><img data-aos="zoom-in" class="img-responsive" src="{% static 'Images/404_image.png' %}" height="500" width="900" alt="404_error"></a>            
+            <p class="caption mt-5" data-aos="fade-up">The page you are looking for is not available</p>
+        </div>
+    </div>
+</body>
+{% endblock %}
+
+</html>
